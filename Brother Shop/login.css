@@ -2,7 +2,7 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  background-color: rgba(0, 0, 0, 0.911);
   color: #333;
   display: flex;
   justify-content: center;
@@ -62,18 +62,18 @@ h1 {
 }
 
 .btn {
-  background: #6a11cb;
+  background: #000000;
   color: #fff;
   padding: 10px;
   border: none;
-  border-radius: 5px;
+  border-radius: 1.5rem;
   cursor: pointer;
   width: 100%; /* Botão ocupa toda a largura */
   box-sizing: border-box;
 }
 
 .btn:hover {
-  background: #2575fc;
+  background: #3f3f3f;
 }
 
 /* Links de navegação */
@@ -85,7 +85,7 @@ h1 {
 
 .signup a,
 .login a {
-  color: #6a11cb;
+  color: #000000;
   text-decoration: none;
   font-weight: bold;
 }
@@ -110,21 +110,6 @@ header {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 20px;
-}
-
-.search-bar {
-  display: flex;
-  align-items: center;
-  width: 100%;
-  gap: 10px;
-}
-
-.search-bar input {
-  flex: 1;
-  padding: 8px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  box-sizing: border-box; /* Inclui padding na largura */
 }
 
 .user-avatar {

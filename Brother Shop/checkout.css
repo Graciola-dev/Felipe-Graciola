@@ -1,0 +1,232 @@
+/* Estilos gerais */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f8f8f8;
+}
+.hamburguer-btn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 30px;
+  height: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.hamburguer-btn .bar {
+  width: 100%;
+  height: 4px;
+  background-color: black;
+  border-radius: 2px;
+  transition: transform 0.3s, opacity 0.3s, background-color 0.3s;
+}
+
+/* Animação para o botão ao abrir */
+.hamburguer-btn.open .bar:nth-child(1) {
+  transform: rotate(45deg) translate(0.5rem, 0.4rem);
+}
+
+.hamburguer-btn.open .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburguer-btn.open .bar:nth-child(3) {
+  transform: rotate(-45deg) translate(0.5rem, -0.5rem);
+}
+
+/* Menu */
+.menu {
+  position: fixed;
+  top: 0;
+  right: -250px;
+  width: 250px;
+  height: 100%;
+  background-color: #f4f4f4;
+  color: black;
+  transition: right 0.3s ease-in-out;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.menu-container {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.menu ul {
+  list-style: none;
+  padding: 0;
+}
+
+.menu li {
+  margin: 15px 0;
+}
+
+.menu a {
+  color: black;
+  text-decoration: none;
+  font-size: 18px;
+  transition: color 0.3s;
+}
+
+.menu a:hover {
+  color: rgb(70, 70, 70);
+}
+
+.login-btn {
+  border: solid black;
+  background-color: #fff;
+  padding: 10px;
+  text-align: center;
+  border-radius: 1.3rem;
+  transition: background-color 0.3s;
+}
+
+.login-btn:hover {
+  color: white;
+  background-color: black;
+}
+
+/* Quando o Menu estiver aberto */
+.menu.open {
+  right: 0;
+}
+
+.search-bar {
+  flex-grow: 1;
+  margin: 0 10px;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.header {
+  border-radius: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #fff;
+  border-bottom: 1px solid #ccc;
+}
+
+.search-bar {
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.user-avatar-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.avatar-image {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.user-name {
+  gap: 3rem;
+  font-size: 14px;
+  color: #333;
+  font-weight: bold;
+}
+.search-bar input {
+  padding: 5px 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 1.5rem;
+}
+
+/* Checkout Container */
+.checkout {
+  border-radius: 1.5rem;
+  padding: 20px;
+  background-color: white;
+  margin: 20px auto;
+  max-width: 500px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.checkout h2,
+.checkout h3 {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+/* Forms */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+form input {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 1.5rem;
+  font-size: 1em;
+}
+
+/* Payment Options */
+.payment-options {
+  display: flex;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+.payment-options button {
+  flex: 1;
+  padding: 10px;
+  background-color: #f0f0f0;
+  border: 1px solid #ddd;
+  border-radius: 1.5rem;
+  cursor: pointer;
+  font-size: 1em;
+  transition: all 0.3s;
+}
+
+.payment-options button:hover {
+  background-color: #e0e0e0;
+}
+
+.payment-options button.selected {
+  border: 2px solid black;
+}
+
+/* PIX Options */
+#pix-options {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+#pix-options button {
+  padding: 10px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#pix-qr {
+  width: 150px;
+  height: 150px;
+  margin: 10px auto;
+  background-color: #ddd; /* Placeholder for QR Code */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1em;
+  color: #555;
+}

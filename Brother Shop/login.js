@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       // Salvar os dados do usuário no localStorage
       localStorage.setItem("userEmail", email);
-      localStorage.setItem("userAvatar", "https://via.placeholder.com/40"); // Substitua pela URL real da foto do usuário
+      localStorage.setItem("userAvatar", "https://github.com/Graciola-dev.png"); // Substitua pela URL real da foto do usuário
 
       // Após o login bem-sucedido, redirecionar para a página inicial (index.html)
       window.location.href = "index.html"; // Altere para o caminho correto do seu arquivo index.html

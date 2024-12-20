@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout</title>
+    <link rel="stylesheet" href="checkout.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="logo">
+        <a href="index.html"
+          ><img src="assets/logo.svg" alt="Logo da Loja Cristã"
+        /></a>
+      </div>
+      <div class="search-bar">
+        <input type="text" placeholder="Pesquise..." />
+        <!-- Container para exibir a foto do usuário -->
+        <div id="user-avatar-container" class="user-avatar-container">
+          <!-- A foto e o e-mail do usuário serão adicionados aqui via JavaScript -->
+        </div>
+      </div>
+
+      <!-- Menu Hambúrguer -->
+      <div id="menu-hamburguer" class="menu">
+        <div class="menu-container">
+          <ul>
+            <li><a href="checkout.html">Checkout</a></li>
+            <li><a href="#">Lançamentos</a></li>
+            <li><a href="#">Ofertas</a></li>
+            <li><a href="camimasc.html">Masculino</a></li>
+            <li><a href="camifem.html">Feminino</a></li>
+            <li><a href="#">Sobre Nós</a></li>
+            <li><a href="login.html" class="login-btn">Entrar</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Botão do Menu -->
+      <div class="hamburguer-btn" onclick="toggleMenu()">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+
+      <script src="main.js"></script>
+    </header>
+
+    <main>
+      <section class="checkout">
+        <h2>Dados do Pagamento e Entrega</h2>
+
+        <!-- Dados Pessoais -->
+        <div class="dados-pessoais">
+          <h3>Dados Pessoais</h3>
+          <form>
+            <input type="text" placeholder="Nome completo" />
+            <input type="email" placeholder="E-mail" />
+            <input type="text" placeholder="CPF" />
+            <input type="tel" placeholder="Telefone" />
+          </form>
+        </div>
+
+        <!-- Escolha Forma de Envio -->
+        <div class="forma-envio">
+          <h3>Escolha Forma de Envio</h3>
+          <form>
+            <input type="text" placeholder="CEP" />
+            <input type="text" placeholder="Endereço" />
+            <input type="text" placeholder="Número" />
+            <input type="text" placeholder="Complemento" />
+            <input type="text" placeholder="Referência" />
+            <input type="text" placeholder="Bairro" />
+            <input type="text" placeholder="Cidade" />
+          </form>
+        </div>
+
+        <!-- Escolha Forma de Pagamento -->
+        <div class="forma-pagamento">
+          <h3>Escolha Forma de Pagamento</h3>
+          <div class="payment-options">
+            <button id="pix">PIX</button>
+            <button id="credito">Crédito</button>
+            <button id="debito">Débito</button>
+          </div>
+          <!-- Conteúdo Dinâmico -->
+          <div id="payment-details">
+            <form id="default-payment-form">
+              <input type="text" placeholder="Número do Cartão" />
+              <input type="text" placeholder="Nome no Cartão" />
+              <input type="text" placeholder="Data de Vencimento (MM/AA)" />
+              <input type="text" placeholder="CVV" />
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
